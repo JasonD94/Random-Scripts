@@ -1,0 +1,60 @@
+#!/bin/bash
+
+#   V1.01
+#   NOTES
+#   Requires lsusb, rsync, beep
+#   & and LG G3 (other phones, try replacing "LG" with your brand)
+#   Also - credit for some of this comes from:
+#   http://askubuntu.com/questions/342319/where-are-mtp-mounted-devices-located-in-the-filesystem
+
+# Not necessary, but I like to grab the start time.
+start="data +%s"
+
+# NOTE - NEED TO FIND A WAY TO DETECT A USB DEVICE ON PLUG IN.
+# THEN THIS WILL BE COMPLETE!!
+
+# Detect changes to the MTP protcol
+# Gonna have to get the whole line. And echo it for debugging.
+echo "FULL DEVICE INFO: "
+OUTPUT="$(lsusb | grep LG)"
+printf "*****************************************************\n"
+echo $OUTPUT
+printf "*****************************************************\n"
+
+# Get the USB_BUS # of our phone
+usb_bus="${OUTPUT% Device*}"
+usb_bus="${usb_bus#Bus }"
+echo "USB BUS #: " $usb_bus # DEBUGGING
+
+# Now let's get the USB_DEVICE # of the phone
+usb_device="${OUTPUT%%:*}"
+usb_device="${usb_device#*Device }"
+echo "USB DEVICE #: " $usb_device
+
+# Now we can get the path for our sync! YAY!
+MTP_PATH="/run/user/1000/gvfs/mtp:host=%5Busb%3A${usb_bus}%2C${usb_device}%5D"
+echo "MTP PATH: " $MTP_PATH
+
+# rsync internal phone memory
+rsync -avzh --progress --exclude /Android \
+$MTP_PATH/Internal\ storage/ \
+/media/jason/Data/_G3_Backup/Internal
+
+# rsync external SD card
+cd ~/_Custom/Backups   # You might not need this - I just have some huge files on my SD Card.
+rsync -avzh --progress --exclude-from 'rsync-exclude.txt' \
+$MTP_PATH/SD\ card/ \
+/media/jason/Data/_G3_Backup/SD_Card
+
+# Print we done yo to ze screen.
+printf "\n\n********************************\n"
+printf "I'M DONE YO\n"
+printf "********************************\n"
+
+# Let's get the total time it took!
+end="data +%s"
+total=$((end-start))
+echo "TOTAL TIME THIS TOOK: " $total " seconds"
+
+# Beep when it is done.
+beep -r 5
