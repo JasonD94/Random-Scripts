@@ -1,0 +1,5 @@
+TOOL TIP:
+%A %B %d, %Y
+
+CLOCK OPTIONS:
+%l:%M %p %n  %_m/%e/%Y    

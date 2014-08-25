@@ -1,0 +1,43 @@
+#!/bin/sh
+
+# This script makes installing programs in Linux super easy.
+# To make this script excutable copy/paste the following into a terminal:
+# sudo chmod +x install_script
+# Then to run type:
+# ./install_script
+
+# Follow this site:
+# https://sites.google.com/site/easylinuxtipsproject/ssd
+
+# Add a few repos - uncomment on first install
+#wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+#sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+#sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+#Ssudo add-apt-repository ppa:webupd8team/sublime-text-3
+
+# Get quicktile stuff
+sudo apt-get install python python-gtk2 python-xlib python-dbus python-wnck
+
+# MAKE SURE TO DOWNLOAD QUICKTILE.
+# Then run the following from the quicktile folder (~/quicktile/):
+# sudo ./setup.py
+# Also change 
+
+# Update Locale so underscores show up first
+sudo update-locale LC_COLLATE=C
+
+# Update the repos.
+sudo apt-get update
+
+# Screensaver for Xubuntu
+sudo apt-get install xscreensaver xscreensaver-gl-extra xscreensaver-data-extra
+
+# Get Sublime
+sudo apt-get install sublime-text-installer
+
+# Useful tools
+sudo apt-get install gksu leafpad synaptic gdebi linux-firmware-nonfree
+
+# M A G I C
+# Mass installs all the programs I use. Add more as I find them!
+sudo apt-get install grub-customizer steam gparted git neverball shutter keepassx transmission libreoffice vlc gimp terminator guake wine nmap wireshark virtualbox curl gedit google-chrome-stable filezilla pychess grsync rsync unetbootin
