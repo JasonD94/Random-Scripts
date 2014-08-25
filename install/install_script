@@ -34,6 +34,9 @@ sudo ./setup.py install
 
 # Also change the keybindings to "Shift" instead of "Alt"! 
 
+# Maybe need to run this on startup?
+# quicktile.py --daemonize
+# Yes, add the quicktile script to /etc/rc.local!
 
 # Update Locale so underscores show up first
 sudo update-locale LC_COLLATE=C
