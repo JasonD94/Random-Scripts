@@ -5,6 +5,8 @@
 # sudo chmod +x install_script
 # Then to run type:
 # ./install_script
+# Or you could just right click the script, and go to "Permisisons" and then check
+# "Excutable"...
 
 # Follow this site:
 # https://sites.google.com/site/easylinuxtipsproject/ssd
@@ -13,15 +15,25 @@
 #wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 #sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 #sudo add-apt-repository ppa:danielrichter2007/grub-customizer
-#Ssudo add-apt-repository ppa:webupd8team/sublime-text-3
+#sudo add-apt-repository ppa:webupd8team/sublime-text-3
 
+# *******************
 # Get quicktile stuff
+# *******************
 sudo apt-get install python python-gtk2 python-xlib python-dbus python-wnck
 
+# Might need to get this stuff too?
+wget https://bootstrap.pypa.io/ez_setup.py -O - | sudo python
+
 # MAKE SURE TO DOWNLOAD QUICKTILE.
+git clone https://github.com/ssokolow/quicktile.git ~/Quicktile
+
 # Then run the following from the quicktile folder (~/quicktile/):
-# sudo ./setup.py
-# Also change 
+cd ~/Quicktile
+sudo ./setup.py install
+
+# Also change the keybindings to "Shift" instead of "Alt"! 
+
 
 # Update Locale so underscores show up first
 sudo update-locale LC_COLLATE=C
@@ -40,4 +52,7 @@ sudo apt-get install gksu leafpad synaptic gdebi linux-firmware-nonfree
 
 # M A G I C
 # Mass installs all the programs I use. Add more as I find them!
-sudo apt-get install grub-customizer steam gparted git neverball shutter keepassx transmission libreoffice vlc gimp terminator guake wine nmap wireshark virtualbox curl gedit google-chrome-stable filezilla pychess grsync rsync unetbootin
+sudo apt-get install grub-customizer steam gparted git neverball shutter \
+keepassx transmission libreoffice vlc gimp terminator guake wine nmap \
+wireshark virtualbox curl gedit google-chrome-stable filezilla pychess \
+grsync rsync unetbootin
