@@ -7,4 +7,5 @@ speaker beep. It might also include other random stuff found on the ubuntu repos
 
 1. rsync backup - this one will backup my LG G3. It even beeps to let me know its done! :o
 2. beep music - I found a bunch of these and wanted to save them for use later.
-3. install related scripts
+3. install related scripts - mass installs ~30 programs I use.
+4. A sync to fix my mouse's DPI. Two line script but it should make life easier.
