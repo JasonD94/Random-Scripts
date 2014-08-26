@@ -38,6 +38,11 @@ sudo ./setup.py install
 # quicktile.py --daemonize
 # Yes, add the quicktile script to /etc/rc.local!
 
+# ********************************
+#  Razer Death Adder Config stuff
+# ********************************
+sudo apt-get install python3 libusb-1.0.0-dev python-pyside cmake
+
 # Update Locale so underscores show up first
 sudo update-locale LC_COLLATE=C
 

@@ -1,5 +1,11 @@
 #!/bin/sh
 # A script to run QUICKTILE on start up. Not sure why the install didn't work but this did.
 
+# TURNS OUT THIS SCRIPT DOESN'T WORK WITH RC.LOCAL FOR SOME REASON.	
+# So I just added this script to the "Autostart" tab instead.
+# For future reference that is in: Settings -> Session and Startup -> Application Autostart
+
 cd ~/Quicktile
 quicktile.py --daemonize
+
+exit 0
