@@ -16,25 +16,6 @@
 # 	find this script and run it in a terminal (so you can see if it worked or not)
 #*******************************************************************************************
 
-####################################################################################
-# IGNORE THIS IT DOESN'T SEEM TO WORK FOR ME. MAYBE SOMEONE CAN USE THIS THOUGH. :\
-# So to auto run this upon USB being plugged in, I suggest looking at the
-# ".rules" file in this directory. If placed in:
-# /etc/udev/rules.d/FILE_GOES_HERE
-# Then the script should auto run. See the below thread for more information:
-# http://stackoverflow.com/questions/4189383/bash-script-to-detect-when-my-usb-is-plugged-in-and-to-then-sync-it-with-a-direc
-# Actually, try this one:
-# http://unix.stackexchange.com/questions/65891/how-to-execute-a-shellscript-when-i-plug-in-a-usb-device
-# Since it actually made beeping noises.
-# Next, we redirect all these echos to a log file for debugging.
-# Also, we'll need to sleep the command for 20 seconds to let the G3 mount properly.
-# I was going to auto mount my 1TB drive, but I set it up to automount on boot using:
-# https://help.ubuntu.com/community/MountingWindowsPartitions
-# Also I set up my G3 to automount using the below page:
-# https://wiki.archlinux.org/index.php/MTP
-# (I use Xubuntu 14.04 LTS, so the "gvfs-mtp" part was most useful!)
-################################################################################
-
 # Variables set here. Change any paths, device brands, etc here.
 DEVICE_BRAND='LG'
 
