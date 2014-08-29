@@ -12,10 +12,11 @@
 # https://sites.google.com/site/easylinuxtipsproject/ssd
 
 # Add a few repos - uncomment on first install
-#wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-#sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-#sudo add-apt-repository ppa:danielrichter2007/grub-customizer
-#sudo add-apt-repository ppa:webupd8team/sublime-text-3
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+sudo add-apt-repository ppa:webupd8team/sublime-text-3
+sudo apt-add-repository ppa:pipelight/stable
 
 # *******************
 # Get quicktile stuff
@@ -36,11 +37,13 @@ sudo ./setup.py install
 
 # Maybe need to run this on startup?
 # quicktile.py --daemonize
-# Yes, add the quicktile script to /etc/rc.local!
+# Actually, use the auto_start_quicktile script to get it to autorun.
+# Just make an autostart entry in the session settings page.
 
-# ********************************
-#  Razer Death Adder Config stuff
-# ********************************
+# ****************************************************************
+#  Razer Death Adder Config stuff (Only the command line works...)
+#  Also don't forget to use the autostart razer script!
+# ****************************************************************
 sudo apt-get install python3 libusb-1.0.0-dev python-pyside cmake
 
 # Update Locale so underscores show up first
@@ -57,6 +60,11 @@ sudo apt-get install sublime-text-installer
 
 # Useful tools
 sudo apt-get install gksu leafpad synaptic gdebi linux-firmware-nonfree
+
+# NETFLIX!!
+sudo apt-get install pipelight-multi
+sudo pipelight-plugin --enable silverlight
+sudo apt-get install netflix-desktop
 
 # M A G I C
 # Mass installs all the programs I use. Add more as I find them!

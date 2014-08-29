@@ -1,0 +1,15 @@
+#!/bin/bash
+# This will be a FREENAS rsync command.
+# It should backup all
+
+# Back up custom files/scripts
+rsync -avzh --progress ~/_Custom root@192.168.1.24:/mnt/HDD320GB/Jason_Xubuntu_Desktop
+
+# Back up Coding
+rsync -avzh --progress ~/Coding root@192.168.1.24:/mnt/HDD320GB/Jason_Xubuntu_Desktop
+
+# Backup Photos 
+rsync -avzh --progress ~/Pictures root@192.168.1.24:/mnt/HDD320GB/Jason_Xubuntu_Desktop
+
+# Backup Themes
+rsync -avzh --progress ~/Themes root@192.168.1.24:/mnt/HDD320GB/Jason_Xubuntu_Desktop
