@@ -1,0 +1,1 @@
+These scripts use the Linux command "Say" to speak/talk.
