@@ -102,6 +102,3 @@ printf "************************************************************************
 
 # Beep when it is done.
 beep -r 5
-
-# Opens the log when everything is finished.
-gedit ~/_Sync_Logs/sync_"$now"_"$the_time".log
