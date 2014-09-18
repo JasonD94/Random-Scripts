@@ -69,7 +69,7 @@ sudo apt-get install netflix-desktop
 
 # M A G I C
 # Mass installs all the programs I use. Add more as I find them!
-sudo apt-get install grub-customizer steam gparted git neverball shutter \
+sudo apt-get install grub-customizer steam gparted git neverball teg shutter \
 keepassx transmission libreoffice vlc gimp terminator guake wine nmap \
 wireshark virtualbox curl gedit google-chrome-stable filezilla pychess \
-grsync rsync unetbootin
+grsync rsync unetbootin sl gsmartcontrol clamav geany 
