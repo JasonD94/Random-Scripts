@@ -112,7 +112,3 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-#AndroidDev PATH 
-export PATH=${PATH}:/home/jason/Development/adt_bundle/sdk/tools/
-export PATH=${PATH}:/home/jason/Development/adt_bundle/sdk/platform-tools/
