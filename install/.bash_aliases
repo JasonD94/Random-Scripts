@@ -20,29 +20,11 @@ alias folders="find . -maxdepth 1 -type d -print | xargs du -sk | sort -rn"
 # This will keep you sane when you're about to smash the keyboard again.
 alias frak="fortune"
 
-# GITHUB ALIASES FOUND FROM:
-# https://gist.github.com/mwhite/6887990
-# will modify these later!
-# one-line log
-l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
-
-a = add
-ap = add -p
-c = commit --verbose
-ca = commit -a --verbose
-cm = commit -m
-cam = commit -a -m
-m = commit --amend --verbose
-
-d = diff
-ds = diff --stat
-dc = diff --cached
-
-s = status -s
-co = checkout
-cob = checkout -b
-# list branches sorted by last modified
-b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
-
-# list aliases
-la = "!git config -l | grep alias | cut -c 7-"
+# Misc git aliases, decided to roll my own vs deal with random scripts online.
+# So these are just ones I decided to make & customize.
+alias a="git add -A"
+alias b="git branch"
+alias co="git checkout"
+alias cm="git commit -m"
+alias d="git diff"
+alias s="git status"
