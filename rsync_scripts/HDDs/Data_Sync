@@ -1,0 +1,7 @@
+#!/bin/bash
+#*****************************************************************************
+#  This script will sync my Xubuntu Desktop to a 1TB HDD.
+#*****************************************************************************
+
+# Really simple, but good to have it automated.
+rsync -avzh --progress ~/ /media/Data/Linux_Desktop_Backup/
