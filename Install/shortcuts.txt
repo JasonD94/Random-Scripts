@@ -3,23 +3,30 @@ I'll be setting them up as I go and making them the
 same on every machine, laptop/desktop/etc.
 
 *** WINDOW KEY SHORTCUTS **
-Win Z => Lock screen
-Win X => xkill
-Win C => 
-Win V =>
-Win B =>
-Win A => Maximize Windows
-Win S => 
-Win D => 
-Win F => 
-Win G => 
-Win Q => 
-Win W => Launch Chrome
-Win E => File Manager
-Win R => Application finder
-Win T => Terminal
+* Find these from either Google or the Application finder.
+Bottom row
+Win Z => Shutdown MenuLock screen * (xfce4-session-logout)
+Win X => Lock screen * (xflock4)
+Win C => Maximize Windows * (Window Manager)
+Win V => Hide Window (to tray) * (Window Manager)
+Win B => xkill * (xkill)
 
-** ALIASES - see .bash_aliases and .bashrc **
+Middle row
+Win A => Workspace * LEFT (Window Manager)
+Win S => Open Settings Menu * (xfce4-settings-manager)
+Win D => Workspace RIGHT * (Window Manager)
+Win F => Launch Application Finder * (xfce4-appfinder)
+Win G => Launch Libre Office * (libreoffice)
+
+Top row
+Win Q => File Manager * (exo-open --launch FileManager)
+Win W => Launch Chrome * (/opt/google/chrome/google-chrome)
+Win E => Launch Sublime Text * (/opt/sublime_text/sublime_text)
+Win R => Launch Calculator * (gnome-calculator)
+Win T => Terminal * (exo-open --launch TerminalEmulator)
+
+** ALIASES **
+* - see .bash_aliases and .bashrc *
 
 CD / LS
 alias cu='cd ..'
