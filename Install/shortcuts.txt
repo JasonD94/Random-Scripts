@@ -46,4 +46,4 @@ alias s="git status"
 Misc found on the internet
 alias diskspace="du -S | sort -n -r |more"
 alias folders="find . -maxdepth 1 -type d -print | xargs du -sk | sort -rn"
-alias frak="fortune"
+alias woo="fortune"
