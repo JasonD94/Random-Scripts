@@ -72,4 +72,4 @@ sudo apt-get install netflix-desktop
 sudo apt-get install grub-customizer steam gparted git neverball teg shutter \
 keepassx transmission libreoffice vlc gimp terminator guake wine nmap \
 wireshark virtualbox curl gedit google-chrome-stable filezilla pychess \
-grsync rsync unetbootin sl gsmartcontrol clamav geany 
+grsync rsync unetbootin sl gsmartcontrol clamav geany sensors lm_sensors \
