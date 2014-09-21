@@ -5,4 +5,4 @@
 #****************************************************************
 
 # Really simple, but good to have it automated.
-rsync -avzh --progress --exclude ~/.cache* ~/ /media/Linux-Data/
+rsync -avzh --progress --exclude /.cache* ~/ /media/Linux-Data/

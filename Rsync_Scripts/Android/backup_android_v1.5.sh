@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#   V1.4
+#   V1.5
 #   NOTES
 #   Requires lsusb, rsync, beep, gedit (or change the log opening line to another editor)
 #   & and a LG G3 (other phones, try replacing "LG" with your brand)

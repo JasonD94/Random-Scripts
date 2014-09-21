@@ -1,74 +1,88 @@
 #!/bin/bash
 #*****************************************************************************
-#  This script will sync my Linux Xubuntu laptop with my Xubuntu Desktop
+#  This script will sync my Xubuntu laptop with my Xubuntu Desktop
 #*****************************************************************************
-
-# Need to rsync the following directories:
-# _Custom 
-#  Coding
-#  Documents
-#  Music
-#  Pictures
-#  Templates
-#  Themes
-# ** Roughly 1.3GB
 
 # rsync -avzh --progress SOURCE DESTINATION
 # Let's sync them in both directions too for good measure.
 
+# Not necessary, but I like to grab the start time.
+start=$(date +%s)
+
+# Get the date for a log file.
+now=$(date +"%m_%d_%Y")
+the_time=$(date +"%T")
+
+# Add some space and the date to the log file.
+printf "LAPTOP & DESKTOP SYNC/BACKUP."
+cur_date=$(date +"%c")
+echo " Backup Date: $cur_date"
+printf "\n"
+
+# Define this here in case it changes!
+destination="jason@192.168.1.7"
+
 # First, completely backup the laptop to my desktop's 1TB hard drive.
 # Last I checked this was about 5GB.
-rsync -avzh --progress jason@192.168.1.16:~/ /media/Data/Linux_Laptop_Backup/
+rsync -avzh --exclude /.cache* ${destination}:~/ \
+/media/Data/Linux_Laptop_Backup/ 
 
-# I wonder, I could do the same to my laptop... Maybe later.
+# Second, run a backup script I already made to backup my desktop
+# Xubuntu to an internal 1TB drive on the desktop.
+~/_Custom/Autorun/Desktop_Internal_Backup.sh
 
 ####### Desktop to laptop #######
 # This part will actually sync the two machines.
 
 # _Custom
-rsync -avzh --progress ~/_Custom jason@192.168.1.16:~/
+rsync -avzh ~/_Custom ${destination}:~/
 
 # Coding
-rsync -avzh --progress ~/Coding jason@192.168.1.16:~/
+rsync -avzh ~/Coding ${destination}:~/ 
 
 # Documents
-rsync -avzh --progress ~/Documents jason@192.168.1.16:~/
+rsync -avzh ~/Documents ${destination}:~/
 
 # Music
-rsync -avzh --progress ~/Music jason@192.168.1.16:~/
+rsync -avzh ~/Music ${destination}:~/ 
 
 # Pictures
-rsync -avzh --progress ~/Pictures jason@192.168.1.16:~/
+rsync -avzh ~/Pictures ${destination}:~/ 
 
 # Templates
-rsync -avzh --progress ~/Templates jason@192.168.1.16:~/
+rsync -avzh ~/Templates ${destination}:~/ 
 
 # Themes
-rsync -avzh --progress ~/Themes jason@192.168.1.16:~/
+rsync -avzh ~/Themes ${destination}:~/
 
 ####### Laptop to desktop #######
 # Just the opposite of the above.
 
-# _Backups
-rsync -avzh --progress jason@192.168.1.16:~/_Backups ~/
-
 # _Custom
-rsync -avzh --progress jason@192.168.1.16:~/_Custom ~/
-
+rsync -avzh ${destination}:~/_Custom ~/
 # Coding
-rsync -avzh --progress jason@192.168.1.16:~/Coding ~/
+rsync -avzh ${destination}:~/Coding ~/
 
 # Documents
-rsync -avzh --progress jason@192.168.1.16:~/Documents ~/ 
+rsync -avzh ${destination}:~/Documents ~/
 
 # Music
-rsync -avzh --progress jason@192.168.1.16:~/Music  ~/
+rsync -avzh ${destination}:~/Music  ~/
 
 # Pictures
-rsync -avzh --progress jason@192.168.1.16:~/Pictures  ~/
+rsync -avzh ${destination}:~/Pictures  ~/ 
 
 # Templates
-rsync -avzh --progress jason@192.168.1.16:~/Templates ~/ 
+rsync -avzh ${destination}:~/Templates ~/ 
 
 # Themes
-rsync -avzh --progress jason@192.168.1.16:~/Themes  ~/
+rsync -avzh ${destination}:~/Themes  ~/ 
+
+# Let's get the total time it took!
+end=$(date +%s)
+total=$((end-start))
+
+# Print we done yo to ze screen.
+printf "***********************************************************************************\n"
+echo   "	FINISHED SYNC. TOTAL TIME THIS TOOK: " $total "seconds"
+printf "***********************************************************************************\n"
