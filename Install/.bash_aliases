@@ -11,6 +11,7 @@ alias co="git checkout"
 alias cm="git commit -m"
 alias d="git diff"
 alias p="git push origin"
+alias pu="git pull origin"
 alias s="git status"
 
 # Misc found on the internet
