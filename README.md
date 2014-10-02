@@ -1,5 +1,5 @@
 Bash Scripts
-==================================================
+============
 A bunch of random scripts I have either written or modified.
 
 Couple of notes:
