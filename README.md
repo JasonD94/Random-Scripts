@@ -1,4 +1,5 @@
 Random bash scripts I've written and/or modified.
+==================================================
 
 Couple of notes:
 - I put any requirements I know at the top of the script. This may include "beep" for making the PC
