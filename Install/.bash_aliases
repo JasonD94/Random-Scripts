@@ -5,7 +5,7 @@ alias la='ls -A'
 alias l='ls -CFlh'
 
 # Git
-alias a="git add -A"
+alias a="git add --all :/"
 alias b="git branch"
 alias co="git checkout"
 alias cm="git commit -m"
