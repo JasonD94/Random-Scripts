@@ -1,0 +1,45 @@
+MotionNotify 2584 359
+ButtonPress 1
+MotionNotify 2585 359
+ButtonRelease 1
+MotionNotify 2573 361
+KeyStrPress Caps_Lock
+KeyStrRelease Caps_Lock
+KeyStrPress a
+KeyStrPress n
+KeyStrRelease a
+KeyStrRelease n
+KeyStrPress n
+KeyStrRelease n
+KeyStrPress o
+KeyStrRelease o
+KeyStrPress y
+KeyStrRelease y
+KeyStrPress space
+KeyStrRelease space
+KeyStrPress a
+KeyStrRelease a
+KeyStrPress n
+KeyStrRelease n
+KeyStrPress n
+KeyStrRelease n
+KeyStrPress o
+KeyStrRelease o
+KeyStrPress y
+KeyStrRelease y
+KeyStrPress space
+KeyStrRelease space
+KeyStrPress a
+KeyStrRelease a
+KeyStrPress n
+KeyStrRelease n
+KeyStrPress n
+KeyStrRelease n
+KeyStrPress o
+KeyStrRelease o
+KeyStrPress y
+KeyStrRelease y
+KeyStrPress Caps_Lock
+KeyStrRelease Caps_Lock
+KeyStrPress Return
+KeyStrRelease Return

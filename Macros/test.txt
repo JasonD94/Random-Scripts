@@ -1,0 +1,6 @@
+MotionNotify 2726 132
+ButtonPress 1
+ButtonRelease 1
+MotionNotify 2714 197
+ButtonPress 1
+ButtonRelease 1
