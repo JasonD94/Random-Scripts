@@ -1,4 +1,6 @@
-Random bash scripts I've written and/or modified.
+Bash Scripts
+============
+A bunch of random scripts I have either written or modified.
 
 Couple of notes:
 - I put any requirements I know at the top of the script. This may include "beep" for making the PC
