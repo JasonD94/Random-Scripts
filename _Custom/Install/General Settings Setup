@@ -1,0 +1,20 @@
+Make the following partitions:
+
+---- WINDOWS ----
+50GB?
+
+---- LINUX ----
+GRUB
+boot = 1GB
+root = 30GB
+home = 40GB
+SWAP = 8GB
+
+total: 79GB
+
+Change swapiness to 1.
+Follow this site:
+
+https://sites.google.com/site/easylinuxtipsproject/first#TOC-Optimize-your-Solid-State-Drive-SSD-
+https://sites.google.com/site/easylinuxtipsproject/ssd#TOC-Avoid-exaggerated-measures
+https://sites.google.com/site/easylinuxtipsproject/faq#TOC-Should-I-create-a-separate-home-partition-

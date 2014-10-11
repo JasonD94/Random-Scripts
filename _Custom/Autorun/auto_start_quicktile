@@ -1,0 +1,5 @@
+#!/bin/sh
+# A script to run QUICKTILE on start up. Not sure why the install didn't work but this did.
+
+cd ~/Quicktile
+quicktile.py --daemonize
