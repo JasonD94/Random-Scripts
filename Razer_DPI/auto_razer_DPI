@@ -2,6 +2,6 @@
 
 # Simple script to change my Razer's DPI to 2500 on every boot. 
 # Also shuts the Logo off.
-cd /home/jason/_Custom/Razer_Config_Tool/razercfg-0.29/ui
+cd /home/jason/SpiderOak\ Hive/_Custom/Razer_Config_Tool/razercfg-0.29/ui
 ./razercfg -r 2500
 ./razercfg -l GlowingLogo:off
