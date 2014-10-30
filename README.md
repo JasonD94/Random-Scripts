@@ -1,10 +1,10 @@
 Bash Scripts
 ============
-A bunch of random scripts I have either written or modified.
+A bunch of random scripts I have either written or modified (or plan to).
 
 Couple of notes:
 - I put any requirements I know at the top of the script. This may include "beep" for making the PC
-speaker beep. It might also include other random stuff found on the ubuntu repos.
+speaker beep. It might also include other random stuff found on the Ubuntu Repositories.
 - I run Xubuntu 14.04 LTS, so these should work on other Ubuntu/Debian based distros.
 
 1. Beep music - I found a bunch of these and wanted to save them for use later.

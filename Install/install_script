@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# LAST EDITED: 10/22/2014
+# Needs major update!
+
 # This script makes installing programs in Linux super easy.
 # To make this script excutable copy/paste the following into a terminal:
 # sudo chmod +x install_script
@@ -14,17 +17,17 @@
 # Add a few repos - uncomment on first install
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-sudo add-apt-repository ppa:danielrichter2007/grub-customizer
-sudo add-apt-repository ppa:webupd8team/sublime-text-3
+sudo add-add-repository ppa:danielrichter2007/grub-customizer
+sudo add-add-repository ppa:webupd8team/sublime-text-3
 sudo apt-add-repository ppa:pipelight/stable
 
 # Update the repos.
-sudo apt-get  -y update
+sudo apt-get -y update
 
 # *******************
 # Get quicktile stuff
 # *******************
-sudo apt-get -y install python python-gtk2 python-xlib python-dbus python-wnck
+sudo apt-get -y install python python-gtk2 python-xlib python-dbus python-wnck git
 
 # Might need to get this stuff too?
 wget https://bootstrap.pypa.io/ez_setup.py -O - | sudo python
@@ -37,11 +40,8 @@ cd ~/Quicktile
 sudo ./setup.py install
 
 # Also change the keybindings to "Shift" instead of "Alt"!
-
-# Maybe need to run this on startup?
-# quicktile.py --daemonize
-# Actually, use the auto_start_quicktile script to get it to autorun.
-# Just make an autostart entry in the session settings page.
+# And use the auto_start_quicktile script to get it to autorun.
+# Also make an autostart entry in the session settings page.
 
 # ****************************************************************
 #  Razer Death Adder Config stuff (Only the command line works...)
@@ -55,7 +55,7 @@ sudo update-locale LC_COLLATE=C
 # Screensaver for Xubuntu
 sudo apt-get -y install xscreensaver xscreensaver-gl-extra xscreensaver-data-extra
 
-# Get Sublime
+# Get Sublime (also awesome)
 sudo apt-get -y install sublime-text-installer
 
 # Useful tools
@@ -64,17 +64,28 @@ sudo apt-get -y install gksu leafpad synaptic gdebi linux-firmware-nonfree
 # Programming stuff
 sudo apt-get -y install g++ openjdk-6-jdk gedit curl geany
 
-# System monitors
-sudo apt-get -y install nmon glances htop lm-sensors hddtemp psensor lm-sensors hddtemp psensor
+# System monitors - just cuz there awesome.
+sudo apt-get -y install nmon glances htop lm-sensors hddtemp \
+psensor lm-sensors hddtemp psensor gsmartcontrol
 
 # NETFLIX!!
-sudo apt-get -y install pipelight-multi
+sudo apt-get -y install wine
+sudo apt-get -y install pipelight-multi 
 sudo pipelight-plugin --enable silverlight
-sudo apt-get install netflix-desktop
+sudo apt-get -y install netflix-desktop
 
-# M A G I C
-# Mass installs all the programs I use. Add more as I find them!
-sudo apt-get -y install grub-customizer steam gparted git neverball teg shutter \
-keepassx transmission libreoffice vlc gimp terminator guake wine nmap \
-wireshark virtualbox  google-chrome-stable filezilla pychess \
-grsync rsync unetbootin sl gsmartcontrol clamav
+# Disk related
+sudo apt-get -y install grub-customizer gparted transmission filezilla rsync unetbootin 
+
+# Fun stuff.
+sudo apt-get -y steam pinta gimp vlc neverball teg pychess shutter google-chrome-stable \
+shutter sl
+
+# Security
+sudo apt-get -y keepassx clamav nmap wireshark virtualbox
+
+# Office
+sudo apt-get -y libreoffice
+
+# Macros
+sudo apt-get -y xnee gnee cnee xmacroshut up huy
