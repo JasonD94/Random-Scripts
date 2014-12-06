@@ -13,23 +13,20 @@
 # 4. PROFIT!
 ######################################################################
 
-# Add a few repos
-sudo add-add-repository ppa:danielrichter2007/grub-customizer
-sudo add-add-repository ppa:webupd8team/sublime-text-3
-sudo apt-add-repository ppa:pipelight/stable
+# Add a few repos (uncomment if you run this for the first time!)
+#sudo apt-add-repository ppa:danielrichter2007/grub-customizer
+#sudo apt-add-repository ppa:webupd8team/sublime-text-3
+#sudo apt-add-repository ppa:pipelight/stable
 
 # This is for Chrome
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+#wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+#sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 
 # Update the repos.
 sudo apt-get -y update
 
 # Get python stuff.
 sudo apt-get -y install python python-gtk2 python-xlib python-dbus python-wnck git
-
-# Might need to get this stuff too?
-wget https://bootstrap.pypa.io/ez_setup.py -O - | sudo python
 
 # MAKE SURE TO DOWNLOAD QUICKTILE.
 git clone https://github.com/ssokolow/quicktile.git ~/Quicktile
@@ -77,13 +74,13 @@ sudo apt-get -y install netflix-desktop
 sudo apt-get -y install grub-customizer gparted filezilla rsync unetbootin 
 
 # Fun stuff.
-sudo apt-get -y steam pinta gimp vlc neverball teg pychess shutter shutter sl
+sudo apt-get -y install steam pinta gimp vlc neverball teg pychess shutter shutter sl
 
 # Security
-sudo apt-get -y keepassx nmap wireshark virtualbox
+sudo apt-get -y install keepassx nmap wireshark virtualbox
 
 # Office
-sudo apt-get -y libreoffice
+sudo apt-get -y install libreoffice
 
 # Macros
-sudo apt-get -y xnee gnee cnee xmacro
+sudo apt-get -y install xnee gnee cnee xmacro
