@@ -74,7 +74,7 @@ sudo pipelight-plugin --enable silverlight
 sudo apt-get -y install netflix-desktop
 
 # Disk related
-sudo apt-get -y install grub-customizer gparted transmission filezilla rsync unetbootin 
+sudo apt-get -y install grub-customizer gparted filezilla rsync unetbootin 
 
 # Fun stuff.
 sudo apt-get -y steam pinta gimp vlc neverball teg pychess shutter shutter sl
