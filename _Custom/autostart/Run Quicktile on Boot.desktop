@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=0.9.4
+Type=Application
+Name=Run Quicktile on Boot
+Comment=Since it don't work no other way...
+Exec=/home/jason/Quicktile/auto_start_quicktile
+OnlyShowIn=XFCE;
+StartupNotify=false
+Terminal=false
+Hidden=false
+

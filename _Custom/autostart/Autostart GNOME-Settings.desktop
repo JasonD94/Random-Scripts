@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=0.9.4
+Type=Application
+Name=Autostart GNOME-Settings
+Comment=Autostart GNOME-Settings so my keyboard  backlights are adjustable!
+Exec=/home/jason/_Custom/Autorun/auto_gnome_settings.sh
+OnlyShowIn=XFCE;
+StartupNotify=false
+Terminal=false
+Hidden=true
+
